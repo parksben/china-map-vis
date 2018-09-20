@@ -1,0 +1,22 @@
+{
+  "dependencies": {
+    "axios": "^0.18.0",
+    "cheerio": "^1.0.0-rc.2",
+    "geojson-rewind": "^0.3.1",
+    "request": "^2.88.0"
+  },
+  "name": "china-map-vis",
+  "version": "1.0.0",
+  "description": "Data visualization for 2018 city average salary in the map of China.",
+  "main": "index.js",
+  "devDependencies": {},
+  "scripts": {
+    "update-city-list": "node ./tools/command/download_china_division_list.js && node ./tools/command/build_china_city_list.js",
+    "download-salary-report": "node ./tools/command/pull_china_city_salary_report.js",
+    "resolve-salary-data": "node ./tools/command/build_china_city_salary.js",
+    "download-city-contour": "node ./tools/command/download_china_city_contour.js",
+    "create-browser-side-js": "node ./tools/command/create_browser_side_js.js"
+  },
+  "author": "parksben",
+  "license": "ISC"
+}
